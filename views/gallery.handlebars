@@ -1,0 +1,134 @@
+<style>
+    .p-box21{
+        background-color: rgba(255, 255, 255, 0.753);
+    }
+    .p-box21 a{
+        color: black;
+    }
+</style>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="modal-img" src="" alt="image">
+      </div>
+      <div class="modal-footer">
+        <a href="#" id="model-down" type="button" class="btn btn-success" download>Download</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{#if userAuth}}
+<div class="gal-main">
+{{/if}}
+{{#unless userAuth}}
+<div id="gal-main1" class="gal-main">
+{{/unless}}
+
+    <div class="cross cross1">
+        <img id="menu" src="images/menu.svg" alt="Menu">
+        <img id="close" src="images/close.svg" alt="Close">
+    </div>
+    {{>p_navbar}}
+    <div class="container cont-2">
+        <nav class="navbar navbar2">
+            <div class="logo logo12">
+                <h2><a href="/">Code With Hiten</a></h2>
+            </div>
+            <div class="item-box">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-box">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service-box">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-box">Contact</a>
+                    </li>
+                    {{#unless userAuth}}
+                    <li class="nav-item">
+                        <a data-bs-toggle="modal" data-bs-target="#login" class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#signin" href="#">Sign in</a>
+                    </li>
+                    {{/unless}}
+                    {{#if userAuth}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </nav>
+        {{#unless userAuth}}
+        <h2 class="text-center text-light my-4">You need to be logged in to access this page. <a style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#login" href="#">Login Now</a></h2>
+        </div>
+        </div>
+        {{/unless}}
+        {{#if userAuth}}
+        <div class="gal-box">
+            <div class="gal-search">
+                <input placeholder="Search images.." id="gal-s" type="text">
+                <img src="images/search.svg" alt="search">
+            </div>
+            <div class="gal-inner">
+                <h1 class="display-3">Sigma <b>Photon</b></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, fugiat delectus! Placeat odit officia eaque sit eveniet, ab rem cumque autem error officiis nihil optio libero reprehenderit modi aliquam atque harum et. Officia inventore reiciendis asperiores blanditiis voluptatibus a, atque non libero dolorum in.</p>
+            </div>
+            <div class="quick-select">
+                <h1>Quick Select</h1>
+            </div>
+            <div class="gal-box1">
+                <div class="gal-drops gal-drops-active">
+                    <p>All</p>
+                </div>
+                <div class="gal-drops">
+                    <p>Art</p>
+                </div>
+                <div class="gal-drops">
+                    <p>Commercial</p>
+                </div>
+                <div class="gal-drops">
+                    <p>Design</p>
+                </div>
+                <div class="gal-drops">
+                    <p>Misc</p>
+                </div>
+                <div class="gal-drops">
+                    <p>Mock-Up</p>
+                </div>
+                <div class="gal-drops">
+                    <p>Photography</p>
+                </div>
+                <div class="gal-drops">
+                    <p>Tech</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="text-align: center;" class="cont-3 container">
+    <h1 class="my-2" style="text-align: center;">Images | Result</h1>
+    <div class="gal-img-box">
+
+    </div>
+    <button class="load_more">Load More</button>
+</div>
+
+<script src="script.js"></script>
+{{/if}}
+{{>footer}}

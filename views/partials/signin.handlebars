@@ -1,0 +1,32 @@
+<div class="modal fade" id="signin" tabindex="-1" aria-labelledby="signinLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signinLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST" action="/signin">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleInputEma1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" name="email" id="exampleInputEma1"
+                            aria-describedby="emailHelp" required>
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPasswo1" class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputPasswo1" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+                        <input type="password" name="cpassword" class="form-control" id="exampleInputPassword2" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

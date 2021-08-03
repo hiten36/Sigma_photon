@@ -1,0 +1,116 @@
+{{>navbar}}
+{{#if flag}}
+    <div class="alert alert-{{color}} alert-dismissible fade show" role="alert">
+        <strong>{{msg}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{{/if}}
+<div class="main">
+    <div class="cross">
+        <img id="menu" src="images/menu.svg" alt="Menu">
+        <img id="close" src="images/close.svg" alt="Close">
+    </div>
+    {{>p_navbar}}
+    <div class="container cont1">
+        <div class="home-box">
+            <div class="h-box1">
+                <h1 class="display-5">WE WILL HELP YOU TO <span>GROW YOUR BUSINESS</span></h1>
+                <p>We Are The Team Of <span>Professional Developers</span></p>
+                <button class="h-box-btn">READ MORE</button>
+            </div>
+            <div class="h-box2">
+                <img src="images/p1.svg" alt="image">
+            </div>
+        </div>
+        <div id="about-box" class="about-box">
+            <div class="ab-box1">
+                <h1 class="display-5">About Us</h1>
+                <h3>grow your business with us</h3>
+            </div>
+            <div class="ab-box2">
+                <div class="ab-box21">
+                    <img src="images/p2.svg" alt="image">
+                </div>
+                <div class="ab-box22">
+                    <h1 class="display-5">WE ARE THE TEAM OF PROFESSIONAL DEVELOPERS</h1>
+                    <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores sequi ducimus fugit quisquam illum, totam facilis atque accusamus ipsum dicta quibusdam sed soluta tempore nostrum, sint vitae magni enim! Iure quam modi dignissimos quas.</P>
+                    <button class="h-box-btn">READ MORE</button>
+                </div>
+            </div>
+        </div>
+        <div id="service-box" class="service-box">
+            <div class="ab-box1">
+                <h1 class="display-4">Our Services</h1>
+                <h3>grow your business with us</h3>
+            </div>
+            <div class="ser-box">
+                <div class="ser-card ser-c1">
+                    <img src="images/i1.png" alt="image">
+                    <h3>Settings</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, itaque!</p>
+                </div>
+                <div class="ser-card ser-c2">
+                    <img src="images/i2.png" alt="image">
+                    <h3>Speedup</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, itaque!</p>
+                </div>
+                <div class="ser-card ser-c3">
+                    <img src="images/i3.png" alt="image">
+                    <h3>Privacy</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, itaque!</p>
+                </div>
+                <div class="ser-card ser-c4">
+                    <img src="images/i4.png" alt="image">
+                    <h3>Backups</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, itaque!</p>
+                </div>
+                <div class="ser-card ser-c5">
+                    <img src="images/i5.png" alt="image">
+                    <h3>SSL Secured</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, itaque!</p>
+                </div>
+                <div class="ser-card ser-c6">
+                    <img src="images/i6.png" alt="image">
+                    <h3>Database</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, itaque!</p>
+                </div>
+            </div>
+        </div>
+        <div class="map-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113874.2933810371!2d75.72051800570962!3d26.885346595253992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1627745552633!5m2!1sen!2sin" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div id="contact-box" class="contact-box">
+            <div class="ab-box1">
+                <h1 class="display-5">Contact Us</h1>
+                <p>We will be happy to help you</p>
+            </div>
+            <form method="POST" action="contact" class="con-box2">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Full Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea placeholder="Message here.." class="form-control" id="message" name="message" rows="3" required></textarea>
+                </div>
+                <button class="h-box-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{>footer}}
+
+<script>
+    {{#if login}}
+        window.location.href="/";
+    {{/if}}
+</script>

@@ -1,0 +1,37 @@
+<div class="p-box p-box21">
+    <div class="p-box1">
+        <div class="p1">
+            <a href="/">Home</a>
+        </div>
+        <div class="p1">
+            <a href="#service-box">Services</a>
+        </div>
+        <div class="p1">
+            <a href="#contact-box">Contact</a>
+        </div>
+        {{#unless userAuth}}
+            <div class="p1">
+                <a data-bs-toggle="modal" data-bs-target="#login" href="#">Login</a>
+            </div>
+        {{/unless}}
+
+    </div>
+    <div class="p-box2">
+        <div class="p1">
+            <a href="#about-box">About</a>
+        </div>
+        <div class="p1">
+            <a href="/gallery">Gallery</a>
+        </div>
+        {{#if userAuth}}
+            <div class="p1">  
+                <a href="/logout">Signin</a>
+            </div>
+        {{/if}}
+        {{#unless userAuth}}
+            <div class="p1">  
+                <a data-bs-toggle="modal" data-bs-target="#signin" href="@">Signin</a>
+            </div>
+        {{/unless}}
+    </div>
+</div>

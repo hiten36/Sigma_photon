@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Home</title>
+  </head>
+  <body>
+      {{>login}}
+      {{>signin}}
+
+    {{{body}}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        document.querySelector('.hiten').addEventListener('click',()=>{
+          window.open("instagram.com/hiten_khatri", '_blank').focus();
+        })
+        if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+        }
+        document.getElementById('menu').addEventListener('click',()=>{
+          document.getElementById('menu').style.display='none';
+          document.getElementById('close').style.display='block';
+          document.querySelector('.p-box').style.display='flex';
+          document.querySelector('.p-box').classList.add('p_ani');
+        })
+        document.getElementById('close').addEventListener('click',()=>{
+          document.getElementById('close').style.display='none';
+          document.getElementById('menu').style.display='block';
+          document.querySelector('.p-box').style.display='none';
+        })
+        window.addEventListener('mouseup',(e)=>{
+          let s1=document.querySelector('.p-box');
+          if(!s1.contains(e.target))
+          {
+            s1.style.display='none';
+            document.getElementById('close').style.display='none';
+            document.getElementById('menu').style.display='block';
+          }
+        })
+    </script>
+  </body>
+</html>
