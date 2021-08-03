@@ -540,6 +540,10 @@ body{
         .logo h2{
             font-size: 1.5rem;
         }
+        #modal-img{
+            width: 80%;
+            height: auto;
+        }
     }
     @media only screen and (max-width: 570px) {
         .h-box2 img{
