@@ -133,15 +133,8 @@ app.post('/login',async (req,res)=>{
     }
 })
 
-app.get('/gallery',auth,(req,res)=>{
-    if(req.err)
-    {
-        res.render('gallery',{userAuth:false});
-    }
-    else
-    {
-        res.render('gallery',{userAuth:true});
-    }
+app.get('/gallery',(req,res)=>{
+    res.render('gallery',{userAuth:true});
 })
 
 app.get('/logout',auth, async (req,res)=>{
